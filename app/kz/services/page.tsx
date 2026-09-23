@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+import CorporatePageRoute from "../../corporate-page-route";
+import { buildCorporateMetadata } from "../../corporate-pages-data";
+
+export const metadata: Metadata = buildCorporateMetadata("services", "kz");
+export default function ServicesPage() { return <CorporatePageRoute kind="services" lang="kz" />; }
