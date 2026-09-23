@@ -65,11 +65,11 @@ export default function UrbanSite({ lang = "ru" }: { lang?: Lang }) {
   ];
 
   const serviceCards = [
-    { icon: Building2, title: t("Управление объектом", "Нысанды басқару"), text: t("Стратегическое и операционное управление", "Стратегиялық және операциялық басқару"), image: "/reference/service-management.webp", href: servicePath("property-management", lang) },
-    { icon: Settings2, title: t("Техническая эксплуатация", "Техникалық пайдалану"), text: t("Надёжная работа всех инженерных систем", "Барлық инженерлік жүйелердің сенімді жұмысы"), image: "/reference/service-operation.webp", href: servicePath("building-operation", lang) },
-    { icon: BarChart3, title: t("Коммерческое управление", "Коммерциялық басқару"), text: t("Рост доходности и эффективное использование актива", "Табыстылықты арттыру және активті тиімді пайдалану"), image: "/reference/service-budget.webp", href: servicePath("commercial-property", lang) },
-    { icon: ShieldCheck, title: t("Безопасность и контроль", "Қауіпсіздік және бақылау"), text: t("Комфорт и защита для арендаторов и посетителей", "Жалға алушылар мен келушілерге жайлылық пен қорғаныс"), image: "/reference/service-audit.webp", href: servicePath("engineering-systems", lang) },
-    { icon: Leaf, title: t("Клининг и сервис", "Клининг және сервис"), text: t("Чистота, комфорт и высокий уровень сервиса", "Тазалық, жайлылық және жоғары сервис деңгейі"), image: "/reference/home-service-cleaning.webp", href: corporatePagePath("services", lang) },
+    { icon: Building2, title: t("Управление объектом", "Нысанды басқару"), text: t("Стратегическое и операционное управление", "Стратегиялық және операциялық басқару"), image: "/media/management.webp", href: servicePath("property-management", lang) },
+    { icon: Settings2, title: t("Техническая эксплуатация", "Техникалық пайдалану"), text: t("Надёжная работа всех инженерных систем", "Барлық инженерлік жүйелердің сенімді жұмысы"), image: "/media/engineering.webp", href: servicePath("building-operation", lang) },
+    { icon: BarChart3, title: t("Коммерческое управление", "Коммерциялық басқару"), text: t("Рост доходности и эффективное использование актива", "Табыстылықты арттыру және активті тиімді пайдалану"), image: "/media/business.webp", href: servicePath("commercial-property", lang) },
+    { icon: ShieldCheck, title: t("Безопасность и контроль", "Қауіпсіздік және бақылау"), text: t("Комфорт и защита для арендаторов и посетителей", "Жалға алушылар мен келушілерге жайлылық пен қорғаныс"), image: "/media/security.webp", href: servicePath("engineering-systems", lang) },
+    { icon: Leaf, title: t("Клининг и сервис", "Клининг және сервис"), text: t("Чистота, комфорт и высокий уровень сервиса", "Тазалық, жайлылық және жоғары сервис деңгейі"), image: "/media/corporate-lobby.webp", href: corporatePagePath("services", lang) },
   ];
 
   const heroValues = [
@@ -86,9 +86,9 @@ export default function UrbanSite({ lang = "ru" }: { lang?: Lang }) {
   ];
 
   const ecosystem = [
-    { logo: "/reference/logo-aaa-service.webp", logoAlt: "AAA Service", title: t("Сервис, который создаёт комфорт", "Жайлылық жасайтын сервис"), text: t("Профессиональный клининг, технический сервис и эксплуатационная поддержка", "Кәсіби клининг, техникалық сервис және пайдалану қолдауы"), image: "/reference/ecosystem-service.webp" },
-    { logo: "/reference/logo-prof-stroy.webp", logoAlt: "Prof Stroy Company", title: t("Строим надёжное будущее", "Сенімді болашақ құрамыз"), text: t("Строительно-монтажные работы и технические решения", "Құрылыс-монтаж жұмыстары және техникалық шешімдер"), image: "/reference/ecosystem-stroy.webp" },
-    { logo: "/reference/logo-aaa-urban.webp", logoAlt: "AAA URBAN", title: t("Объединяем возможности", "Мүмкіндіктерді біріктіреміз"), text: t("Комплексное управление недвижимостью для максимальной ценности", "Максималды құндылық үшін жылжымайтын мүлікті кешенді басқару"), image: "/reference/ecosystem-urban.webp" },
+    { logo: "/brands/aaa-service.svg", logoAlt: "AAA Service", title: t("Сервис, который создаёт комфорт", "Жайлылық жасайтын сервис"), text: t("Профессиональный клининг, технический сервис и эксплуатационная поддержка", "Кәсіби клининг, техникалық сервис және пайдалану қолдауы"), image: "/media/corporate-lobby.webp" },
+    { logo: "/brands/prof-stroy-company.svg", logoAlt: "Prof Stroy Company", title: t("Строим надёжное будущее", "Сенімді болашақ құрамыз"), text: t("Строительно-монтажные работы и технические решения", "Құрылыс-монтаж жұмыстары және техникалық шешімдер"), image: "/media/engineering.webp" },
+    { logo: "/brands/aaa-urban.svg", logoAlt: "AAA URBAN", title: t("Объединяем возможности", "Мүмкіндіктерді біріктіреміз"), text: t("Комплексное управление недвижимостью для максимальной ценности", "Максималды құндылық үшін жылжымайтын мүлікті кешенді басқару"), image: "/media/corporate-hero.webp" },
   ];
 
   const people = teamMembers.filter((person) => person.published && person.photo).slice(0, 4);
@@ -163,7 +163,7 @@ export default function UrbanSite({ lang = "ru" }: { lang?: Lang }) {
           {serviceCards.map(({ icon: Icon, title, text, image, href }, index) => (
             <article className="reference-service-card" key={title} data-reveal style={{ "--delay": `${index * 70}ms` } as CSSProperties}>
               <div className="reference-service-copy"><Icon size={25} aria-hidden="true" /><h3>{title}</h3><p>{text}</p><a href={href} aria-label={`${t("Подробнее: ", "Толығырақ: ")}${title}`}><ArrowRight size={16} /></a></div>
-              <figure><img src={image} alt="" width="438" height="1002" loading="lazy" /></figure>
+              <figure><img src={image} alt="" width="1300" height="867" loading="lazy" /></figure>
             </article>
           ))}
         </div>

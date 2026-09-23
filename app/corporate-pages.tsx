@@ -45,25 +45,25 @@ const pageHero: Record<CorporatePageKind, { eyebrow: Localized; title: Localized
     eyebrow: { ru: "О КОМПАНИИ", kz: "КОМПАНИЯ ТУРАЛЫ" },
     title: { ru: "Надёжный партнёр\nв управлении и эксплуатации\nнедвижимости", kz: "Жылжымайтын мүлікті\nбасқару мен пайдаланудағы\nсенімді серіктес" },
     lead: { ru: "AAA URBAN — команда профессионалов, которая создаёт эффективные, безопасные и комфортные пространства для людей и бизнеса.", kz: "AAA URBAN — адамдар мен бизнес үшін тиімді, қауіпсіз және жайлы кеңістік қалыптастыратын кәсіби команда." },
-    image: "/reference/about-hero.webp",
+    image: "/media/corporate-hero.webp",
   },
   services: {
     eyebrow: { ru: "КОМПЛЕКСНЫЕ УСЛУГИ ДЛЯ ВАШЕЙ НЕДВИЖИМОСТИ", kz: "ЖЫЛЖЫМАЙТЫН МҮЛІККЕ АРНАЛҒАН КЕШЕНДІ ҚЫЗМЕТТЕР" },
     title: { ru: "Полный цикл\nуправления недвижимостью", kz: "Жылжымайтын мүлікті\nбасқарудың толық циклі" },
     lead: { ru: "Управление, эксплуатация, инженерные системы, работа с подрядчиками, бюджетирование и контроль. Всё в одной системе управления.", kz: "Басқару, пайдалану, инженерлік жүйелер, мердігерлермен жұмыс, бюджеттеу және бақылау. Барлығы бір басқару жүйесінде." },
-    image: "/reference/services-hero.webp",
+    image: "/media/corporate-hero.webp",
   },
   objects: {
     eyebrow: { ru: "НАШИ ОБЪЕКТЫ", kz: "БІЗДІҢ НЫСАНДАР" },
     title: { ru: "Объекты, которые\nвдохновляют", kz: "Шабыт беретін\nнысандар" },
     lead: { ru: "Мы управляем и эксплуатируем жилую и коммерческую недвижимость, создавая комфортную среду для людей и устойчивую ценность для собственников.", kz: "Біз тұрғын және коммерциялық жылжымайтын мүлікті басқарып, адамдарға жайлы орта және меншік иелеріне тұрақты құндылық қалыптастырамыз." },
-    image: "/reference/objects-hero.webp",
+    image: "/media/corporate-hero.webp",
   },
   contacts: {
     eyebrow: { ru: "КОНТАКТЫ", kz: "БАЙЛАНЫС" },
     title: { ru: "Остаёмся на связи", kz: "Байланыста болайық" },
     lead: { ru: "Обсудим ваш объект, подберём оптимальное решение и подготовим индивидуальное предложение.", kz: "Нысаныңызды талқылап, оңтайлы шешім таңдап, жеке ұсыныс дайындаймыз." },
-    image: "/reference/contacts-hero.webp",
+    image: "/media/corporate-lobby.webp",
   },
 };
 
@@ -231,11 +231,11 @@ function AboutPage({ lang }: { lang: CorporateLang }) {
   const t = (ru: string, kk: string) => kz ? kk : ru;
   const people = teamMembers.filter(person => person.published && person.photo);
   const timeline = [
-    ["2007", t("Старт AAA Service", "AAA Service басталуы"), t("Начало деятельности в сфере клининговых и сервисных услуг", "Клининг және сервистік қызметтер саласындағы жұмыстың басталуы"), "/reference/history-2007.webp"],
-    ["2011", t("Расширение услуг", "Қызметтерді кеңейту"), t("Выход в комплексное техническое обслуживание зданий", "Ғимараттарға кешенді техникалық қызмет көрсетуге көшу"), "/reference/history-2011.webp"],
-    ["2018", "Haileybury Astana", t("Реализация крупного международного проекта, подтвердившего экспертизу команды", "Команда сараптамасын растаған ірі халықаралық жобаны іске асыру"), "/reference/history-2018.webp"],
-    ["2020", t("Опыт с Казатомпром и Самрук-Казына", "Қазатомөнеркәсіп және Самұрық-Қазына тәжірибесі"), t("Успешная работа с национальными компаниями и объектами стратегического значения", "Ұлттық компаниялармен және стратегиялық маңызы бар нысандармен жұмыс"), "/reference/history-2020.webp"],
-    ["2026", t("Запуск AAA URBAN", "AAA URBAN іске қосылуы"), t("Выделение направления управления недвижимостью в отдельный бренд AAA URBAN", "Жылжымайтын мүлікті басқару бағытын AAA URBAN жеке брендіне шығару"), "/reference/history-2026.webp"],
+    ["2007", t("Старт AAA Service", "AAA Service басталуы"), t("Начало деятельности в сфере клининговых и сервисных услуг", "Клининг және сервистік қызметтер саласындағы жұмыстың басталуы"), "/media/corporate-lobby.webp"],
+    ["2011", t("Расширение услуг", "Қызметтерді кеңейту"), t("Выход в комплексное техническое обслуживание зданий", "Ғимараттарға кешенді техникалық қызмет көрсетуге көшу"), "/media/engineering.webp"],
+    ["2018", "Haileybury Astana", t("Реализация крупного международного проекта, подтвердившего экспертизу команды", "Команда сараптамасын растаған ірі халықаралық жобаны іске асыру"), "/media/business.webp"],
+    ["2020", t("Опыт с Казатомпром и Самрук-Казына", "Қазатомөнеркәсіп және Самұрық-Қазына тәжірибесі"), t("Успешная работа с национальными компаниями и объектами стратегического значения", "Ұлттық компаниялармен және стратегиялық маңызы бар нысандармен жұмыс"), "/media/security.webp"],
+    ["2026", t("Запуск AAA URBAN", "AAA URBAN іске қосылуы"), t("Выделение направления управления недвижимостью в отдельный бренд AAA URBAN", "Жылжымайтын мүлікті басқару бағытын AAA URBAN жеке брендіне шығару"), "/media/corporate-hero.webp"],
   ];
   const values: [LucideIcon, string, string][] = [
     [ShieldCheck, t("Прозрачность", "Ашықтық"), t("Открытое взаимодействие с клиентами", "Клиенттермен ашық әрекеттесу")],
@@ -263,11 +263,11 @@ function AboutPage({ lang }: { lang: CorporateLang }) {
       <div className="about-ecosystem">
       <div className="corporate-section-intro" data-reveal><Eyebrow>{t("ЭКОСИСТЕМА ГРУППЫ", "ТОП ЭКОЖҮЙЕСІ")}</Eyebrow><h2>{t("Синергия для комплексных решений", "Кешенді шешімдерге арналған синергия")}</h2><p>{t("Три направления — единая экспертиза. От сервиса до строительства и управления недвижимостью.", "Үш бағыт — біртұтас сараптама. Сервистен құрылыс пен жылжымайтын мүлікті басқаруға дейін.")}</p></div>
       <div className="corporate-ecosystem-flow">
-        <article data-reveal><img className="ecosystem-logo" src="/reference/logo-aaa-service.webp" alt="AAA Service" width="130" height="118" loading="lazy" /><p>{t("Клининговые и сервисные услуги", "Клининг және сервистік қызметтер")}</p><img className="ecosystem-photo" src="/reference/ecosystem-service.webp" alt="" width="136" height="206" loading="lazy" /></article>
+        <article data-reveal><img className="ecosystem-logo" src="/brands/aaa-service.svg" alt="AAA Service" width="320" height="210" loading="lazy" /><p>{t("Клининговые и сервисные услуги", "Клининг және сервистік қызметтер")}</p><img className="ecosystem-photo" src="/media/corporate-lobby.webp" alt="" width="1774" height="887" loading="lazy" /></article>
         <ArrowRight aria-hidden="true" />
-        <article data-reveal><img className="ecosystem-logo" src="/reference/logo-prof-stroy.webp" alt="Prof Stroy Company" width="156" height="116" loading="lazy" /><p>{t("Строительно-монтажные работы и инженерные решения", "Құрылыс-монтаж жұмыстары және инженерлік шешімдер")}</p><img className="ecosystem-photo" src="/reference/ecosystem-stroy.webp" alt="" width="132" height="206" loading="lazy" /></article>
+        <article data-reveal><img className="ecosystem-logo" src="/brands/prof-stroy-company.svg" alt="Prof Stroy Company" width="360" height="210" loading="lazy" /><p>{t("Строительно-монтажные работы и инженерные решения", "Құрылыс-монтаж жұмыстары және инженерлік шешімдер")}</p><img className="ecosystem-photo" src="/media/engineering.webp" alt="" width="1300" height="867" loading="lazy" /></article>
         <ArrowRight aria-hidden="true" />
-        <article data-reveal><img className="ecosystem-logo" src="/reference/logo-aaa-urban.webp" alt="AAA URBAN" width="128" height="100" loading="lazy" /><p>{t("Управление и эксплуатация недвижимости", "Жылжымайтын мүлікті басқару және пайдалану")}</p><img className="ecosystem-photo" src="/reference/ecosystem-urban.webp" alt="" width="154" height="206" loading="lazy" /></article>
+        <article data-reveal><img className="ecosystem-logo" src="/brands/aaa-urban.svg" alt="AAA URBAN" width="320" height="210" loading="lazy" /><p>{t("Управление и эксплуатация недвижимости", "Жылжымайтын мүлікті басқару және пайдалану")}</p><img className="ecosystem-photo" src="/media/corporate-hero.webp" alt="" width="2121" height="741" loading="lazy" /></article>
       </div>
       </div>
     </section>
@@ -283,12 +283,12 @@ function ServicesPage({ lang }: { lang: CorporateLang }) {
   const kz = lang === "kz";
   const t = (ru: string, kk: string) => kz ? kk : ru;
   const services: [LucideIcon, string, string, string, ServicePageKey][] = [
-    [Building2, t("Управление объектом", "Нысанды басқару"), t("Стратегическое и операционное управление", "Стратегиялық және операциялық басқару"), "/reference/service-management.webp", "property-management"],
-    [Settings2, t("Эксплуатация зданий", "Ғимараттарды пайдалану"), t("Надёжная работа и комфорт для пользователей", "Тұрақты жұмыс және пайдаланушыларға жайлылық"), "/reference/service-operation.webp", "building-operation"],
-    [Wrench, t("Инженерные системы", "Инженерлік жүйелер"), t("Обслуживание всех инженерных систем", "Барлық инженерлік жүйелерге қызмет көрсету"), "/reference/service-engineering.webp", "engineering-systems"],
-    [Users, t("Работа с подрядчиками", "Мердігерлермен жұмыс"), t("Отбор, контроль и управление подрядчиками", "Мердігерлерді іріктеу, бақылау және басқару"), "/reference/service-contractors.webp", "property-management"],
-    [BarChart3, t("Бюджет и отчётность", "Бюджет және есептілік"), t("Планирование, контроль затрат и прозрачная отчётность", "Жоспарлау, шығындарды бақылау және ашық есептілік"), "/reference/service-budget.webp", "commercial-property"],
-    [ShieldCheck, t("Аудит и контроль качества", "Аудит және сапаны бақылау"), t("Регулярные проверки и повышение эффективности", "Тұрақты тексерулер және тиімділікті арттыру"), "/reference/service-audit.webp", "residential-audit"],
+    [Building2, t("Управление объектом", "Нысанды басқару"), t("Стратегическое и операционное управление", "Стратегиялық және операциялық басқару"), "/media/management.webp", "property-management"],
+    [Settings2, t("Эксплуатация зданий", "Ғимараттарды пайдалану"), t("Надёжная работа и комфорт для пользователей", "Тұрақты жұмыс және пайдаланушыларға жайлылық"), "/media/engineering.webp", "building-operation"],
+    [Wrench, t("Инженерные системы", "Инженерлік жүйелер"), t("Обслуживание всех инженерных систем", "Барлық инженерлік жүйелерге қызмет көрсету"), "/media/engineering.webp", "engineering-systems"],
+    [Users, t("Работа с подрядчиками", "Мердігерлермен жұмыс"), t("Отбор, контроль и управление подрядчиками", "Мердігерлерді іріктеу, бақылау және басқару"), "/media/management.webp", "property-management"],
+    [BarChart3, t("Бюджет и отчётность", "Бюджет және есептілік"), t("Планирование, контроль затрат и прозрачная отчётность", "Жоспарлау, шығындарды бақылау және ашық есептілік"), "/media/business.webp", "commercial-property"],
+    [ShieldCheck, t("Аудит и контроль качества", "Аудит және сапаны бақылау"), t("Регулярные проверки и повышение эффективности", "Тұрақты тексерулер және тиімділікті арттыру"), "/media/security.webp", "residential-audit"],
   ];
   const capabilities: [LucideIcon, string, string][] = [
     [Headphones, t("Диспетчеризация", "Диспетчерлік басқару"), t("Приём обращений и координация специалистов", "Өтініштерді қабылдау және мамандарды үйлестіру")],
@@ -300,23 +300,23 @@ function ServicesPage({ lang }: { lang: CorporateLang }) {
     [FileText, t("Эксплуатационная документация", "Пайдалану құжаттамасы"), t("Ведение и актуализация документов", "Құжаттарды жүргізу және жаңарту")],
     [ShieldCheck, t("Контроль качества", "Сапаны бақылау"), t("Проверка состояния и выполненных работ", "Жағдайды және орындалған жұмыстарды тексеру")],
   ];
-  const process: [string, LucideIcon, string, string][] = [
-    ["01", ClipboardCheck, t("Аудит объекта", "Нысан аудиті"), t("Анализ текущего состояния и потребностей", "Ағымдағы жағдай мен қажеттіліктерді талдау")],
-    ["02", FileText, t("Разработка решения", "Шешім әзірлеу"), t("Индивидуальная стратегия и план работ", "Жеке стратегия және жұмыс жоспары")],
-    ["03", Settings2, t("Запуск и настройка", "Іске қосу және баптау"), t("Введение процессов и команды", "Процестер мен команданы енгізу")],
-    ["04", BarChart3, t("Операционное управление", "Операциялық басқару"), t("Стабильная работа и постоянное развитие", "Тұрақты жұмыс және үздіксіз даму")],
+  const process: [LucideIcon, string, string][] = [
+    [ClipboardCheck, t("Аудит объекта", "Нысан аудиті"), t("Анализ текущего состояния и потребностей", "Ағымдағы жағдай мен қажеттіліктерді талдау")],
+    [FileText, t("Разработка решения", "Шешім әзірлеу"), t("Индивидуальная стратегия и план работ", "Жеке стратегия және жұмыс жоспары")],
+    [Settings2, t("Запуск и настройка", "Іске қосу және баптау"), t("Введение процессов и команды", "Процестер мен команданы енгізу")],
+    [BarChart3, t("Операционное управление", "Операциялық басқару"), t("Стабильная работа и постоянное развитие", "Тұрақты жұмыс және үздіксіз даму")],
   ];
   const segments: [LucideIcon, string, string, string][] = [
-    [House, t("Жилые комплексы", "Тұрғын үй кешендері"), t("Управление домом и работа с ОСИ", "Үйді басқару және МИБ-пен жұмыс"), "/reference/segment-residential.webp"],
-    [Building2, t("Бизнес-центры", "Бизнес-орталықтар"), t("Эксплуатация, бюджет и подрядчики", "Пайдалану, бюджет және мердігерлер"), "/reference/segment-business.webp"],
-    [Hotel, t("Отели", "Қонақүйлер"), t("Обслуживание систем и планирование", "Жүйелерге қызмет көрсету және жоспарлау"), "/reference/segment-hotel.webp"],
-    [Store, t("Коммерческие объекты", "Коммерциялық нысандар"), t("Надёжная работа для бизнеса", "Бизнеске арналған сенімді жұмыс"), "/reference/segment-commercial.webp"],
+    [House, t("Жилые комплексы", "Тұрғын үй кешендері"), t("Управление домом и работа с ОСИ", "Үйді басқару және МИБ-пен жұмыс"), "/media/residence.webp"],
+    [Building2, t("Бизнес-центры", "Бизнес-орталықтар"), t("Эксплуатация, бюджет и подрядчики", "Пайдалану, бюджет және мердігерлер"), "/media/business.webp"],
+    [Hotel, t("Отели", "Қонақүйлер"), t("Обслуживание систем и планирование", "Жүйелерге қызмет көрсету және жоспарлау"), "/media/hotel.webp"],
+    [Store, t("Коммерческие объекты", "Коммерциялық нысандар"), t("Надёжная работа для бизнеса", "Бизнеске арналған сенімді жұмыс"), "/media/retail.webp"],
   ];
 
   return <>
     <section className="corporate-section services-overview">
       <div className="corporate-section-heading"><div data-reveal><Eyebrow>{t("КЛЮЧЕВЫЕ НАПРАВЛЕНИЯ", "НЕГІЗГІ БАҒЫТТАР")}</Eyebrow><h2>{t("Наши услуги", "Біздің қызметтер")}</h2></div><a href="#services-detail">{t("Все направления", "Барлық бағыттар")}<ArrowRight /></a></div>
-      <div className="corporate-service-grid">{services.map(([Icon, title, text, image, key], index) => <article key={`${key}-${title}`} data-reveal style={{ "--delay": `${index * 60}ms` } as CSSProperties}><div><Icon /><h3>{title}</h3><p>{text}</p><a href={servicePath(key, lang)} aria-label={title}><ArrowRight /></a></div><img src={image} alt="" width="650" height="820" loading="lazy" /></article>)}</div>
+      <div className="corporate-service-grid">{services.map(([Icon, title, text, image, key], index) => <article key={`${key}-${title}`} data-reveal style={{ "--delay": `${index * 60}ms` } as CSSProperties}><div><Icon /><h3>{title}</h3><p>{text}</p><a href={servicePath(key, lang)} aria-label={title}><ArrowRight /></a></div><img src={image} alt="" width="1300" height="867" loading="lazy" /></article>)}</div>
     </section>
     <section className="corporate-section services-capabilities" id="services-detail">
       <div className="corporate-section-intro" data-reveal><Eyebrow>{t("ДЕТАЛЬНЫЕ ВОЗМОЖНОСТИ", "ТОЛЫҚ МҮМКІНДІКТЕР")}</Eyebrow><h2>{t("Больше, чем управление", "Басқарудан да артық")}</h2><p>{t("Закрываем ключевые задачи и обеспечиваем стабильную, эффективную и безопасную эксплуатацию объектов.", "Негізгі міндеттерді шешіп, нысандардың тұрақты, тиімді және қауіпсіз пайдаланылуын қамтамасыз етеміз.")}</p></div>
@@ -324,7 +324,7 @@ function ServicesPage({ lang }: { lang: CorporateLang }) {
     </section>
     <section className="corporate-section services-process">
       <div className="corporate-section-intro" data-reveal><Eyebrow>{t("КАК МЫ РАБОТАЕМ", "ҚАЛАЙ ЖҰМЫС ІСТЕЙМІЗ")}</Eyebrow><h2>{t("От анализа до результата", "Талдаудан нәтижеге дейін")}</h2><p>{t("Прозрачный и понятный процесс на каждом этапе.", "Әр кезеңде ашық әрі түсінікті процесс.")}</p></div>
-      <div className="process-grid">{process.map(([number, Icon, title, text], index) => <article key={number} data-reveal style={{ "--delay": `${index * 70}ms` } as CSSProperties}><span>{number}</span><Icon /><div><h3>{title}</h3><p>{text}</p></div>{index < process.length - 1 && <ArrowRight className="process-arrow" />}</article>)}</div>
+      <div className="process-grid">{process.map(([Icon, title, text], index) => <article key={title} data-reveal style={{ "--delay": `${index * 70}ms` } as CSSProperties}><Icon /><div><h3>{title}</h3><p>{text}</p></div>{index < process.length - 1 && <ArrowRight className="process-arrow" />}</article>)}</div>
     </section>
     <section className="corporate-section services-segments-results">
       <div className="segments-side"><div className="corporate-section-intro" data-reveal><Eyebrow>{t("ДЛЯ КАКИХ ОБЪЕКТОВ", "ҚАНДАЙ НЫСАНДАРҒА")}</Eyebrow><h2>{t("Наши решения эффективны", "Біздің шешімдер тиімді")}</h2><p>{t("Опыт в разных сегментах недвижимости.", "Жылжымайтын мүліктің әртүрлі сегменттеріндегі тәжірибе.")}</p></div><div className="segment-grid">{segments.map(([Icon, title, text, image], index) => <article key={title} data-reveal style={{ "--delay": `${index * 60}ms` } as CSSProperties}><img src={image} alt="" width="620" height="390" loading="lazy" /><div><Icon /><h3>{title}</h3><p>{text}</p></div></article>)}</div></div>
@@ -414,7 +414,7 @@ function ContactsPage({ lang }: { lang: CorporateLang }) {
     <section className="corporate-section contacts-layout">
       <div className="contact-info-column" data-reveal><h2>{t("Контактная информация", "Байланыс ақпараты")}</h2><p>{t("Выберите удобный способ связи. Мы всегда открыты к диалогу.", "Өзіңізге ыңғайлы байланыс тәсілін таңдаңыз. Біз диалогқа әрқашан ашықпыз.")}</p><div>{contactCards.map(([Icon, label, content, href]) => <a href={href} key={label} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined}><Icon /><small>{label}</small>{content}<b><ArrowRight /></b></a>)}</div></div>
       <div className="contact-form-card" data-reveal><h2>{t("Отправить запрос", "Сұрау жіберу")}</h2><p>{t("Оставьте заявку, и мы свяжемся с вами для обсуждения деталей.", "Өтінім қалдырыңыз, біз егжей-тегжейін талқылау үшін хабарласамыз.")}</p>{readyUrl ? <div className="contact-ready"><Check /><h3>{t("Запрос готов", "Сұрау дайын")}</h3><p>{t("Откройте WhatsApp и отправьте подготовленное сообщение.", "WhatsApp-ты ашып, дайын хабарламаны жіберіңіз.")}</p><a className="reference-button reference-button--red" href={readyUrl} target="_blank" rel="noopener noreferrer">{t("Открыть WhatsApp", "WhatsApp-ты ашу")}<ArrowUpRight /></a><button type="button" onClick={() => setReadyUrl("")}>{t("Изменить данные", "Деректерді өзгерту")}</button></div> : <form onSubmit={submit}><div className="contact-form-grid"><label>{t("Ваше имя", "Атыңыз")} *<input name="name" required minLength={2} placeholder={t("Введите имя", "Атыңызды жазыңыз")} /></label><label>{t("Компания", "Ұйым")}<input name="company" placeholder={t("Название компании", "Ұйым атауы")} /></label><label>{t("Телефон", "Телефон")} *<input name="phone" type="tel" required placeholder="+7 (___) ___-__-__" /></label><label>{t("Тип объекта", "Нысан түрі")}<select name="type" defaultValue=""><option value="" disabled>{t("Выберите тип", "Түрін таңдаңыз")}</option>{objectTypes.map(item => <option key={item.id} value={kz ? item.kz : item.ru}>{kz ? item.kz : item.ru}</option>)}</select></label></div><label>{t("Комментарий", "Пікір")}<textarea name="comment" rows={4} placeholder={t("Расскажите о задаче или объекте", "Міндет немесе нысан туралы айтып беріңіз")} /></label><label className="honeypot" aria-hidden="true">Website<input name="website" tabIndex={-1} /></label>{error && <p className="form-error" role="alert">{error}</p>}<button className="reference-button reference-button--red" type="submit">{t("Отправить заявку", "Өтінім жіберу")}<ArrowRight /></button><small>{t("Нажимая кнопку, вы соглашаетесь с ", "Түймені басу арқылы сіз ")}<a href={kz ? "/kz/privacy" : "/privacy"}>{t("Политикой конфиденциальности", "Құпиялық саясатымен келісесіз")}</a></small></form>}</div>
-      <aside className="contact-map-column" data-reveal><h2>{t("Наш офис на карте", "Картадағы кеңсеміз")}</h2><p>{t("Будем рады встретить вас в нашем офисе. Перед визитом согласуем удобное время.", "Сізді кеңсемізде қарсы алуға қуаныштымыз. Келмес бұрын ыңғайлы уақытты келісеміз.")}</p><iframe title={t("Карта офиса AAA URBAN", "AAA URBAN кеңсесінің картасы")} src={`https://www.google.com/maps?q=${mapQuery}&output=embed`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /><div className="office-card"><img src="/reference/contact-office.webp" alt="" width="216" height="264" loading="lazy" /><div><h3>AAA URBAN</h3><p>{siteSettings.address[lang]}</p><strong><MessageCircle />{t("Перед визитом", "Келмес бұрын")}</strong><span>{t("Позвоните или напишите нам в WhatsApp.", "Бізге қоңырау шалыңыз немесе WhatsApp арқылы жазыңыз.")}</span></div></div></aside>
+      <aside className="contact-map-column" data-reveal><h2>{t("Наш офис на карте", "Картадағы кеңсеміз")}</h2><p>{t("Будем рады встретить вас в нашем офисе. Перед визитом согласуем удобное время.", "Сізді кеңсемізде қарсы алуға қуаныштымыз. Келмес бұрын ыңғайлы уақытты келісеміз.")}</p><iframe title={t("Карта офиса AAA URBAN", "AAA URBAN кеңсесінің картасы")} src={`https://www.google.com/maps?q=${mapQuery}&output=embed`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /><div className="office-card"><img src="/media/corporate-lobby.webp" alt="" width="1774" height="887" loading="lazy" /><div><h3>AAA URBAN</h3><p>{siteSettings.address[lang]}</p><strong><MessageCircle />{t("Перед визитом", "Келмес бұрын")}</strong><span>{t("Позвоните или напишите нам в WhatsApp.", "Бізге қоңырау шалыңыз немесе WhatsApp арқылы жазыңыз.")}</span></div></div></aside>
     </section>
     <section className="corporate-section contacts-social"><div className="corporate-section-intro" data-reveal><h2>{t("Мы в социальных сетях", "Біз әлеуметтік желілердеміз")}</h2><p>{t("Следите за нашими проектами, аналитикой рынка и новостями компании.", "Жобаларымызды, нарық аналитикасын және компания жаңалықтарын бақылаңыз.")}</p></div><div className="social-info-grid"><article><Camera /><strong>Instagram</strong><span>AAA URBAN</span></article><article><BriefcaseBusiness /><strong>LinkedIn</strong><span>AAA URBAN</span></article><article><Play /><strong>YouTube</strong><span>AAA URBAN</span></article><a className="social-whatsapp" href={whatsappUrl(t("Здравствуйте! Хочу обсудить объект с AAA URBAN.", "Сәлеметсіз бе! AAA URBAN компаниясымен нысанды талқылағым келеді."))} target="_blank" rel="noopener noreferrer"><MessageCircle /><div><strong>{t("Написать в WhatsApp", "WhatsApp-та жазу")}</strong><span>{siteSettings.phoneDisplay}</span></div><QrCode aria-hidden="true" /></a></div></section>
     <AuditBanner lang={lang} variant="priority" />

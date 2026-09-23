@@ -24,7 +24,7 @@
   --font-sans: Arial, Helvetica, sans-serif;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body { margin: 0; background: var(--background); color: var(--foreground); font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
 main { overflow-x: clip; }
 body, button, input, textarea, select { font-family: Arial, Helvetica, sans-serif; }
